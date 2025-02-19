@@ -1,97 +1,335 @@
-# Frontend Mentor - Bento grid
+# Frontend Mentor - Bento grid solution
 
-![Design preview for the Bento grid coding challenge](./preview.jpg)
+This is a solution to the [Bento grid challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bento-grid-RMydElrlOj). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-**To do this challenge, you need a good understanding of HTML and CSS.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this bento grid and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
 Your users should be able to: 
 
 - View the optimal layout for the interface depending on their device's screen size
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### Screenshot
 
-### Expected behaviour
+![mySolution](./assets/images/mySolutionSS.png)
 
-The two components in the left column on desktop are placed at the bottom on mobile. This is a good opportunity to practice your CSS Grid placement skills.
+### Links
 
-## Where to find everything
+- Solution URL: [GitHub Page](https://github.com/juliettedb-v/bento-grid-main)
+- Live Site URL: [GitHub Pages Challenge Solution](https://juliettedb-v.github.io/social-links-profile-main-challenge/)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+## My process
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+I started by creating my HTML the best way possible, I separated elements with BEM structure to practice. Then I focused on the distribution by checking on the examples. It was a fun and stressful experience, I'd rather working with figma ngl. I put on a good playlist and started to add styles. First I thought I was doing everything great, I decided to make a grid-container and put two more containers inside, the one on the left is flex and the other is grid as well, it seem like I was doing alright. But, If you noticed I decided to use grid-template-areas to organize all my elements of the right container, and I did it perfectly with the desktop view! On the other hand, the mobile view... the cards were not looking as in the picture since I organized them differently. That's when I struggled. I had to re-organize my cards and my HTML to make it fit perfectly in botw views. Anyway It was fun, after taking a good break, I relaxed and actually fixed faster than I thought. I'm very proud of my results!
 
-If you would like the Figma design file to gain experience using professional tools and build more accurate projects faster, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### Built with
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+- HTML 
+- CSS custom properties
+- BEM structure
+- CSS Grid
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
 
-## Building your project
+### What I learned
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+I'm proud of my HTML and BEM distribution. How could I improve it?
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
 
-## Deploying your project
+```HTML
+  <div class="grid-container">
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+    <!-- I divided grid with 2 containers, left is flex and right is grid -->
+    <div class="container-left">
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+      <div class="card-1">
+        <h2 class="card-1_subtitle">Create and schedule content <i class="card-1_subtitle_purple">quicker.</i></h2>
+        <img src="./assets/images/illustration-create-post.webp" alt="create-post" class="card-1_img">
+      </div>
+  
+      <div class="card-2">
+        <h2 class="card-2_subtitle">Write your content using AI.</h2>
+        <img src="./assets/images/illustration-ai-content.webp" alt="ai-content-img" class="card-2_img">
+      </div>
+  
+    </div>
+  
+    <div class="container-right">
+      <div class="card-3">
+        <h1 class="card-3_title">Social Media <strong class="card-3_title_yellow">10x</strong> <i>Faster</i> with AI</h1>
+        <img src="./assets/images/illustration-five-stars.webp" alt="five-stars" class="card-3_img">
+        <p class="card-3_paragraph">Over 4,000 5-star reviews</p>
+      </div>
+  
+      <div class="card-4">
+        <img src="./assets/images/illustration-multiple-platforms.webp" alt="multiple-platforms" class="card-4_img">
+        <h3 class="card-4_subtitle">Manage multiple accounts and platforms.</h3>
+      </div>
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+      <div class="card-5">
+        <h3 class="card-5_subtitle">Maintain a consistent posting schedule.</h3>
+        <img src="./assets/images/illustration-consistent-schedule.webp" alt="consistent-schedule" class="card-5_img">
+      </div>
 
-## Create a custom `README.md`
+      <div class="card-6">
+        <h3 class="card-6_subtitle">Schedule to social media.</h3>
+        <div class="card-6_img">
+          <img src="./assets/images/illustration-schedule-posts.webp" alt="schedule-posts">
+        </div>
+        <p class="card-6_paragraph">Optimize post timings to publish content at the perfect time for your audience.</p>
+      </div>
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+      <div class="card-7">
+        <img src="./assets/images/illustration-grow-followers.webp" alt="follower-growth" class="card-7_img">
+        <h2 class="card-7_subtitle">Grow followers with non-stop content.</h2>
+      </div>
+  
+      <div class="card-8">
+        <h1 class="card-8_title">>56%</h1>
+        <p class="card-8_paragraph">faster audience growth</p>
+        <img src="./assets/images/illustration-audience-growth.webp" alt="audience-growth" class="card-8_img">
+      </div>
+    </div>
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+    <div class="card-a">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      <br>
+      Coded by <a href="https://github.com/juliettedb-v">Juliette Villarroel</a>.
+    </div>
+  </div>
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+```
+Once again, I'm proud of my basic responsive design, although it seems long...
 
-## Submitting your solution
+```css
+@media (max-width: 640px) {
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+    body {
+        background-color: whitesmoke;
+    }
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: auto;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
 
-## Sharing your solution
+    .container-right {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        margin: 1rem 1rem 0 1rem;
+    }
 
-There are multiple places you can share your solution:
+    .card-3 {
+        width: 21.3rem;
+        height: 18.3rem;
+    }
+    
+    .card-3_title {
+        font-size: 48px;
+        margin: 1rem 2rem 1rem 2rem;
+    }
+    
+    .card-3_img {
+        width: 12rem;
+        margin: 0;
+    }
+    
+    .card-3_paragraph{
+        font-size: 18px;
+    }
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+    .card-4 {
+        width: 21.3rem;
+        height: 10.4rem;
+        overflow: hidden;
+    }
+    
+    .card-4_img {
+        width: 22rem;
+        height: 5rem;
+    }
+    
+    .card-4_subtitle {
+        font-size: 24px;
+        margin: 0 1rem 2rem;
+    }
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+    .card-5 {
+        width: 21.3rem;
+        height: 13.6rem;
+    }
+    
+    .card-5_subtitle {
+        font-size: 24px;
+        margin: 1rem 1rem;
+    }
+    
+    .card-5_img {
+        width: 14rem;
+        height: auto;
+        margin: 0 1rem;
+    }
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+    .card-6 {
+        width: 21.3rem;
+        height: 29.25rem;
+        margin:0;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .card-6_subtitle {
+        font-size: 24px;
+        padding: 1rem;
+        margin:0;
+    }
+    
+    .card-6_img {
+        width: 19.25rem;
+        height: 17rem;
+        justify-self: center;
+    }
 
-## Got feedback for us?
+    .card-6_img img {
+        padding: 0;
+        margin: 0;
+        width: 19.25rem;
+        height: 17rem;
+    }
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+    .card-6_paragraph {
+        padding-top: 1rem;
+        text-align: center;
+    }
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+    .card-7 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 21.3rem;
+        height: 23.3rem;
+    }
 
-**Have fun building!** 🚀
+    .card-7_img {
+        padding: 0 3rem 0 3rem;
+        justify-self: center;
+        width: 14.6rem;
+        height: 12rem;
+    }
+    
+    
+    .card-7_subtitle {
+        font-size: 32px;
+        text-align: center;
+        margin: 1rem 3rem 0 3rem;
+    }
+
+    .card-8 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 21.3rem;
+        height: 13.2rem; 
+    }
+
+    .card-8_title {
+        padding: 0.5rem 1rem 0 1rem;
+        font-size: 42px;
+    }
+
+    .card-8_paragraph {
+        padding-left: 1rem;
+        font-size: 18px;
+    }
+    
+    .card-8_img {
+        padding: 0 1rem;
+        width: 12.5rem;
+        height: 4.5rem;
+    }
+
+    .container-left {
+        order: 2;
+        align-items: center;
+    }
+
+    .card-1 {
+        width: 21.3rem;
+        height: 15rem;
+    }
+
+    .card-1_subtitle {
+        font-size: 28px;
+    }
+
+    .card-1_img {
+        width: 12rem;
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    .card-2 {
+        width: 21.3rem;
+        height: 21.8rem;
+    }
+    
+    .card-2_subtitle {
+        font-size: 28px;
+    }
+    
+    .card-2_img {
+        width: 12rem;
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    
+    .card-a {
+        display: none;
+    }
+
+}
+
+```
+
+### Continued development
+
+This challenge made me realize how interesting mobile-first responsive design is! So I'd like to learn more about it in the near future. I'll keep improving my CSS-grid performance, so you'll see more!
+
+### Useful resources
+
+- [Px to rem conversor](https://nekocalc.com/es/px-a-rem-conversor) - This helped me to converse all my px values to rem, it was faster.
+- [Iconic cssreference.io](https://cssreference.io) - This helped me a lot to check on properties.
+
+## Author
+
+- Website - [Juliette](https://github.com/juliettedb-v/bento-grid-main)
+- Frontend Mentor - [@juliettedb-v](https://www.frontendmentor.io/profile/juliettedb-v)
+
+## Acknowledgments
+
+Taking Platzi's courses really helped me out to understand basic knowledge that I needed for completing this challenge. I know it's helpful for a lot of hispanics out there and I highly recommend it.
