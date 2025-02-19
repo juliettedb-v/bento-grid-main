@@ -34,7 +34,7 @@ Your users should be able to:
 ### Links
 
 - Solution URL: [GitHub Page](https://github.com/juliettedb-v/bento-grid-main)
-- Live Site URL: [GitHub Pages Challenge Solution](https://juliettedb-v.github.io/social-links-profile-main-challenge/)
+- Live Site URL: [GitHub Pages Challenge Solution](https://juliettedb-v.github.io/bento-grid-main/)
 
 ## My process
 
